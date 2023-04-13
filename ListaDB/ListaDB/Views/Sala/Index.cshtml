@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h2>Gestão de Salas</h2>
+<div>
+    <a class="btn btn-sucess" href="Sala/Create"> Novo</a>
+</div>
+<div>
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Descricao</td>
+        </tr>
+        @foreach (var item in ViewBag.listasalas)
+        {
+            <tr>
+                <td>@item.SALAID</td>
+                <td>@item.SALADESC</td>
+            </tr>
+        }
+
+    </table>
+</div>
+
