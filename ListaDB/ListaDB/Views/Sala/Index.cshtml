@@ -15,10 +15,11 @@
         </tr>
         @foreach (var item in ViewBag.listasalas)
         {
-            <tr>
-                <td>@item.SALAID</td>
-                <td>@item.SALADESC</td>
-            </tr>
+          <tr>
+             <td>@item.SALAID</td>
+             <td>@item.SALADESC</td>
+             <td><a class="btn btn-primary" href="/Sala/Atualizar/@item.SALAID"> Editar </a></td>
+          </tr>
         }
 
     </table>

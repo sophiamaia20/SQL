@@ -28,6 +28,21 @@ namespace ListaDB.DAL
         {
             string query = "insert sala (SALADESC) values(@SALADESC)";
             var qtdInserida = _conexao.Execute(query, psala);
+
+        }
+        public void updateSala(Sala psala)
+        {
+            string query = "update sala set SALADESC=@SALADESC where SALID=@SALID";
+
+            int qtdAtualizada = _conexao.Execute(query, psala);
+
+        }
+        public void apgarSala(Sala psala)
+        {
+            string query = "Delete sala where SALAID=@SALAID";
+
+            int qtdAtualizada = _conexao.Execute(query, psala);
+
         }
     }
 }
